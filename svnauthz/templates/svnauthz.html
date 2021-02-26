@@ -1,10 +1,18 @@
+# extends "admin.html"
 <!DOCTYPE html>
 <html>       
-# include "admin.html"
 <head>
-  <title>Subversion: Path-based Authorization</title>
+  <title>
+  # block admintitle
+  ${_("Subversion: Path-based Authorization")}
+  $ endblock admintitle
+  </title>
+  # block head
+  ${ super() }
+  # endblock head 
 </head>
 <body>
+  # block adminpanel
   <h2>Subversion: Path-based Authorization</h2>
   <form id="saveauthzfile" method="post" action="">
     <div class="field">
@@ -21,5 +29,6 @@
     <a href="http://svnbook.red-bean.com/nightly/en/svn.serverconfig.pathbasedauthz.html">SVN Book</a>
     for information about path-based authorization.
   </div>
+  # endblock adminpanel
 </body>
 </html>
