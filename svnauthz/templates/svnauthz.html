@@ -1,17 +1,18 @@
-<!DOCTYPE HTML PUBLIC
-    "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:py="http://genshi.edgewall.org/"
-      xmlns:xi="http://www.w3.org/2001/XInclude"
-      xmlns:i18n="http://genshi.edgewall.org/i18n">
-<xi:include href="admin.html"/>
+# extends "admin.html"
+<!DOCTYPE html>
+<html>       
 <head>
-  <title>Subversion: Path-based Authorization</title>
+  <title>
+  # block admintitle
+  ${_("Subversion: Path-based Authorization")}
+  # endblock admintitle
+  </title>
 </head>
 <body>
+  # block adminpanel
   <h2>Subversion: Path-based Authorization</h2>
   <form id="saveauthzfile" method="post" action="">
+    <input type="hidden" name="__FORM_TOKEN" value="${form_token}" />
     <div class="field">
       <textarea rows="20" cols="20" class="trac-fullwidth"
                 title="Authz file content" name="current">${auth_data}</textarea>
@@ -26,5 +27,6 @@
     <a href="http://svnbook.red-bean.com/nightly/en/svn.serverconfig.pathbasedauthz.html">SVN Book</a>
     for information about path-based authorization.
   </div>
+  # endblock adminpanel
 </body>
 </html>
