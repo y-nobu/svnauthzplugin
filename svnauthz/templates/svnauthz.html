@@ -12,6 +12,7 @@
   # block adminpanel
   <h2>Subversion: Path-based Authorization</h2>
   <form id="saveauthzfile" method="post" action="">
+    <input type="hidden" name="__FORM_TOKEN" value="${form_token}" />
     <div class="field">
       <textarea rows="20" cols="20" class="trac-fullwidth"
                 title="Authz file content" name="current">${auth_data}</textarea>
